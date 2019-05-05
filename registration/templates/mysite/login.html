@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+          <style type="text/css">
+        .first {
+          margin-left: 300px;
+          margin-right: 200px;
+
+        }
+                nav {
+          background-color: green;
+        
+      </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/register">REGISTER</a></li>
+        <li><a href="/logout">LOGOUT</a></li>
+        <li><a href="item/list">Items</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="first">
+
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" name="password">
+        </p>
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+
+</html>

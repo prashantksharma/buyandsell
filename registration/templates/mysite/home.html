@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <style type="text/css">
+        .first {
+          margin-left: 300px;
+
+        }
+
+        nav {
+          background-color: green;
+        }
+      </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/user_type">REGISTER</a></li>
+        <li><a href="/logout">LOGOUT</a></li>
+        <li><a href="item/list">Items</a></li>
+        <li><a href="item/">ADD</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+
+
+  <div class="first">
+
+    {% if user.is_authenticated %}
+    <!--<p>hello</p>
+    <p>welcome {{ user.username }}</p>
+
+    <p><a class="waves-effect waves-light btn" href="/logout">Logout</a></p>
+    -->
+
+    <!-- <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo right">Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/register">REGISTER</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          <li><a href="item/list">Items</a></li>
+          <li><a href="item/">ADD</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+        <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1 ">
+            <div class="card-content white-text">
+              <span class="card-title">Welcome {{ user.username }}</span>
+              <p>The idea is very simple.You add items, set the price and reap the awards.</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" href="/logout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+    {% else %}
+    <!--
+    <p><a class="waves-effect waves-light btn" href="/login">Login</a></p>
+    <p><a class="waves-effect waves-light btn" href="/register">Register</a></p>
+
+    -->
+
+    <!-- <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo right">Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/register">REGISTER</a></li>
+          <li><a href="/login">LOGOUT</a></li>
+          <li><a href="item/list">Items</a></li>
+          <li><a href="item/">ADD</a></li>
+        </ul>
+      </div>
+    </nav> -->
+
+       <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Welcome </span>
+              <p>The idea is very simple.You add items, set the price and reap the awards</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" href="/login">Login</a>
+              <a class="waves-effect waves-light btn" href="/register">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+
+
+
+    {% endif %}
+
+</div>
+        
+</body>
+
+</html>
