@@ -20,8 +20,8 @@ from registration import views as reg_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/', auth_views.login, {'template_name': 'mysite/login.html'}),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'mysite/logout.html'}),
+    url(r'^login/', auth_views.LoginView, {'template_name': 'mysite/login.html'}),
+    url(r'^logout/$', auth_views.LogoutView, {'template_name': 'mysite/logout.html'}),
     url(r'^', include('registration.urls')),
     url(r'^item/', include('item.urls')),
     url(r'^register/', reg_views.register)
